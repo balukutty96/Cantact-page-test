@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | BS Visionary</title>
+  <meta
+    name="description"
+    content="Contact BS Visionary for digital marketing, social media management, SEO and advertising services."
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --purple: #8b5cf6;
+      --purple-dark: #6d28d9;
+      --black: #07070a;
+      --card: #111116;
+      --border: rgba(139, 92, 246, 0.25);
+      --text: #ffffff;
+      --muted: #a1a1aa;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.16), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(109, 40, 217, 0.13), transparent 30%),
+        var(--black);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Header */
+
+    header {
+      width: 100%;
+      padding: 24px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--purple);
+    }
+
+    .back-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .back-link:hover {
+      background: var(--purple);
+      border-color: var(--purple);
+    }
+
+    /* Main */
+
+    main {
+      width: min(1150px, 90%);
+      margin: 40px auto 80px;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .heading .tag {
+      display: inline-block;
+      color: #c4b5fd;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .heading h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1;
+      margin-bottom: 18px;
+      letter-spacing: -2px;
+    }
+
+    .heading h1 span {
+      color: var(--purple);
+    }
+
+    .heading p {
+      max-width: 620px;
+      margin: auto;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* Layout */
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    /* Info */
+
+    .info-card,
+    .form-card {
+      background: rgba(17, 17, 22, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-card h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .info-card > p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid var(--border);
+      font-size: 19px;
+      flex-shrink: 0;
+    }
+
+    .info-item small {
+      display: block;
+      color: #888892;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .info-item strong,
+    .info-item a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    /* Form */
+
+    .form-card h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .form-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #e4e4e7;
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #292932;
+      background: #09090d;
+      color: #fff;
+      padding: 14px 15px;
+      border-radius: 12px;
+      outline: none;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #62626b;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--purple);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+
+    select {
+      cursor: pointer;
+    }
+
+    select option {
+      background: #111116;
+      color: white;
+    }
+
+    textarea {
+      min-height: 135px;
+      resize: vertical;
+    }
+
+    .required {
+      color: #a78bfa;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      padding: 16px 22px;
+      border-radius: 13px;
+      color: white;
+      font-size: 15px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.25);
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 35px rgba(124, 58, 237, 0.4);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .note {
+      text-align: center;
+      color: #777780;
+      font-size: 11px;
+      margin-top: 13px;
+    }
+
+    /* Footer */
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #19191f;
+      padding: 25px;
+      color: #66666f;
+      font-size: 12px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+      header {
+        padding: 20px 5%;
+      }
+
+      main {
+        width: 92%;
+        margin-top: 25px;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .info-card,
+      .form-card {
+        padding: 25px;
+        border-radius: 20px;
+      }
+
+      .heading {
+        margin-bottom: 35px;
+      }
+
+      .heading h1 {
+        letter-spacing: -1px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .logo {
+        font-size: 21px;
+      }
+
+      .back-link {
+        padding: 8px 13px;
+        font-size: 12px;
+      }
+
+      .heading h1 {
+        font-size: 42px;
+      }
+
+      .info-card,
+      .form-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BS <span>Visionary</span></div>
+
+    <a href="#" class="back-link">Home</a>
+  </header>
+
+
+  <main>
+
+    <section class="heading">
+      <div class="tag">Let's Work Together</div>
+
+      <h1>Let's Start a <span>Conversation.</span></h1>
+
+      <p>
+        Have a business idea, marketing challenge, or growth goal?
+        Send your details and let's discuss how BS Visionary can help.
+      </p>
+    </section>
+
+
+    <section class="contact-wrapper">
+
+      <!-- Contact Information -->
+
+      <div class="info-card">
+
+        <h2>Get in Touch</h2>
+
+        <p>
+          Tell us about your business and what you are looking to achieve.
+          We'll get back to you through WhatsApp.
+        </p>
+
+        
+        <div class="info-item">
+          <div class="icon">💬</div>
+
+          <div>
+            <small>WhatsApp</small>
+            <a href="https://wa.me/919566637107" target="_blank">
+              +91 9566637107
+            </a>
+          </div>
+        </div>
+
+
+        <div class="info-item">
+          <div class="icon">🚀</div>
+
+          <div>
+            <small>Response</small>
+            <strong>Usually within 24 hours</strong>
+          </div>
+        </div>
+
+
+        <div class="info-item">
+          <div class="icon">📈</div>
+
+          <div>
+            <small>Services</small>
+            <strong>Digital Marketing & SEO</strong>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Contact Form -->
+
+      <div class="form-card">
+
+        <h2>Send an Enquiry</h2>
+
+        <p class="form-subtitle">
+          Fill in the details below. Your enquiry will open in WhatsApp.
+        </p>
+
+
+        <form id="contactForm">
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="fullName">
+                Full Name <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+
+            <div class="form-group">
+              <label for="businessName">
+                Business Name <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="businessName"
+                placeholder="Enter your business name"
+                required
+              />
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="phone">
+                Phone Number <span class="required">*</span>
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                pattern="[0-9+\-\s()]{7,20}"
+                required
+              />
+            </div>
+
+
+            <div class="form-group">
+              <label for="email">
+                Email <span class="required">*</span>
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="service">
+              Service Required <span class="required">*</span>
+            </label>
+
+            <select id="service" required>
+
+              <option value="" disabled selected>
+                Select a service
+              </option>
+
+              <option value="Social Media Management">
+                Social Media Management
+              </option>
+
+              <option value="Local SEO">
+                Local SEO
+              </option>
+
+              <option value="Google Business Profile Management">
+                Google Business Profile Management
+              </option>
+
+              <option value="Meta Ads">
+                Meta Ads
+              </option>
+
+              <option value="Google Ads">
+                Google Ads
+              </option>
+
+              <option value="Website SEO">
+                Website SEO
+              </option>
+
+              <option value="Creative Design">
+                Creative Design
+              </option>
+
+              <option value="Digital Marketing">
+                Digital Marketing
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Message <span class="required">*</span>
+            </label>
+
+            <textarea
+              id="message"
+              placeholder="Tell us about your business and what you need help with..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button type="submit" class="submit-btn">
+            Send Enquiry on WhatsApp
+          </button>
+
+          <p class="note">
+            WhatsApp will open with your enquiry details. Tap Send to submit.
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 BS Visionary. All rights reserved.
+  </footer>
+
+
+  <script>
+
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (event) {
+
+      event.preventDefault();
+
+
+      // BS Visionary WhatsApp Business Number
+      const whatsappNumber = "919566637107";
+
+
+      // Get form values
+      const fullName =
+        document.getElementById("fullName").value.trim();
+
+      const businessName =
+        document.getElementById("businessName").value.trim();
+
+      const phone =
+        document.getElementById("phone").value.trim();
+
+      const email =
+        document.getElementById("email").value.trim();
+
+      const service =
+        document.getElementById("service").value;
+
+      const message =
+        document.getElementById("message").value.trim();
+
+
+      // Create WhatsApp message
+      const whatsappMessage =
+`📩 *New Client Enquiry – BS Visionary*
+
+👤 *Full Name:* ${fullName}
+
+🏢 *Business Name:* ${businessName}
+
+📱 *Phone Number:* ${phone}
+
+📧 *Email:* ${email}
+
+🎯 *Service Required:* ${service}
+
+💬 *Message:*
+${message}
+
+━━━━━━━━━━━━━━━━━━
+Sent from BS Visionary Website`;
+
+
+      // Encode message
+      const encodedMessage =
+        encodeURIComponent(whatsappMessage);
+
+
+      // WhatsApp URL
+      const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+
+      // Open WhatsApp
+      window.open(whatsappURL, "_blank");
+
+    });
+
+  </script>
+
+</body>
+</html>
